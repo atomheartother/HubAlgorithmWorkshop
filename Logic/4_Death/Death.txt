@@ -1,0 +1,43 @@
+===
+DEATH'S TRIALS
+===
+
+LORE:
+
+It's Sunday night and, like every good Epitech student, you're spending your night at school to code half of your Wolf3D project in a few hours. But misfortune strikes and you slip on a banana peel while coding. Somehow, that sends you flying out the window (coding is dangerous!) and you die on impact with the ground.
+
+Death comes to find you, and invites you to join in the afterlife. But you're not gonna take that - you have to turn in your project! So you challenge death to a race. Death smirks and suddenly, you're in a huge maze with high posts scattered across it. Death challenges you: You have to run across the maze so that you touch every post at least once, and you have to do it faster than Death itself!
+
+Defeat death, and turn in your Wolf3D in time! Hurry!
+
+EXERCISE:
+
+Code a function runFast(), prototyped like this:
+
+int        runFast(char **map);
+
+map is a 2D map of characters that looks like this:
+
+#######
+#..@..#
+#0..#B#
+#######
+
+#: wall
+.: ground
+0: Starting point
+(any other symbol): post
+
+You start from 0,
+You must find the shortest path that crosses every other post in any order. That should be runFast()'s return value.
+
+Tiles are accessed like this: map[y][x];
+
+ADDITIONAL INFORMATION:
+
+- You cannot go diagonally
+- You cannot cross walls
+- The order in which you cross the posts does NOT matter as long as you cross them all
+- Your program should be properly optimized. Anything under one second is unacceptable,
+
+This exercise might take a lot of code, I strongly advise you to use our correction main and test gradually. 

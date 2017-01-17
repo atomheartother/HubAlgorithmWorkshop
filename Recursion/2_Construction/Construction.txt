@@ -1,0 +1,76 @@
+--Construction--
+Build recursion great again
+
+Context:
+
+You are Carlos, a native Mexican actully resident in the US, you work at a construction company,
+and you just obtained a new contract.
+The directives are from the US administration:
+- Take the blocks from the block factory in Denver
+- Expertise some blocks in Albuquerque to assure the solidity and stock them in the associated storage facilities.
+- Empile them carefully at El Paso.
+
+Unfortunaly you have only one truck to do the job, it mean that you will be able to carry only one block at a time.
+
+Requierement:
+- Pointer
+- Recursion
+- Linked list
+
+Goal:
+You will turn in a file named construction.c containing a construction() function prototyped like this:
+
+void    construction(size_t nbBlocks, storage_t* location1, storage_t* location2, storage_t* location3);
+
+All the blocks are stocked in 'location1' (Denver) they are also sorted from the lightest to the heaviest,
+you must do the same during block manipulation otherwise the heavy block will break the others under him.
+
+Every time you move a block you need to display the name of the current location and the name
+of the place you want to move it to with the following syntax :
+
+"Carlos moves a block from ['name_from'] to ['name_to'] !"
+
+Exemple : "Carlos moves a block from [Denver] to [El Paso] !"
+Don't forget to add a newline at the end of every line !
+
+
+Data structures:
+
+typedef struct   block_s
+{
+  int            block_weight;
+  struct block_s* next;
+}                block_t;
+
+typedef struct  storage_s
+{
+  block_t*	blockPile;
+  size_t        pileLength;
+  char*		name;
+}               storage_t;
+
+blockPile:
+	  ____________
+	 |     12     |
+	 |____________|
+	  ____________
+	 |     42     |
+	 |____________|		NULL			NULL
+	_______________		_______________		_______________
+name:	    Denver		  Albuquerque		    El Paso
+pileLength:   2			      0			      0
+
+Forbidden keywords:
+- while
+- for
+- goto
+- malloc
+
+Additional information:
+- DON'T put the data structures in your turn in files.
+- Every block starts in 'location1' and the others locations 'blockPile' are empty (NULL).
+- Be careful: You MUST display ALL your moves.
+- NEVER put a heavy block over a lighter one!
+- You can learn what's LIFO.
+- You can start by doing a sample function to manipulate your data structure.
+- Carlos is a little bit lazy so he has to figure out how to do this in the fewest moves possible!

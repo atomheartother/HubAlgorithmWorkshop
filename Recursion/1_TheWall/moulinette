@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]
+then
+    echo "USAGE : ./moulinette file.c" ; exit
+fi
+
+grep -e "while" -e "for" -e "goto" -e "malloc" -e "asm" $1
+
+if [ $? -eq 0 ]; then
+    echo "You have a forbidden keyword!"
+    exit
+fi
+
+MAPS="maps/1.map maps/2.map maps/3.map"
+
+cp $1 ./src/findpath.c
+
+make
+if [ $? -ne 0 ]; then
+   echo "Compilation failed!"
+else
+    ./thewall $MAPS | ./correction $MAPS
+    if [ $? -eq 0 ]; then
+	echo "Congratulations!"
+    fi
+fi
+
+make fclean
+rm src/findpath.c

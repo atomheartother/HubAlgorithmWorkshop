@@ -1,0 +1,39 @@
+Write a function interection which tells the user if two circles intsercet. It has this prototype :
+
+bool intersection(int x1, int y1, int r1, int x2, int y2, int r2);
+
+x1 && y1 are the center of the Circle1, and r1 is its radius.
+
+this function will return 0 if the two circles intersect, and 1 if not.
+
+
+         ****
+   ***  *    *
+  *   *       *
+ *   * *       *
+*   *   *       *    ====> TRUE
+ *   * *       *
+  *   *       *
+   *** *     *
+        *****
+
+
+        ******
+       *  **  *
+      *  *  *  *
+     *    **    *
+    *            *     ====> FALSE
+    *            *
+     *          *
+      *        *
+       *      *
+        ******
+
+
+    **     **
+   *  *   *  *        =====> FALSE
+    **     **
+						          __________________________
+Just a friendly reminder : distance between two points = \/ (x2 - x1)² + (y2 - y1)²
+
+You can use the libmath to do the exercise.

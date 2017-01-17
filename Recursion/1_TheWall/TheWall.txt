@@ -1,0 +1,56 @@
+--The Wall--
+Make recursion great again
+
+Context:
+You are Pedro, a native Mexican trying to cross over the Mexico-US border. President Trump has started building his wall, but it's not over yet! You've decided to not only cross the border, but to make a map for your family back home so they can follow you to the land of freedom.
+Unfortunately your family reads instructions from bottom to top. You'll have to print the instructions reversed, from end to start...
+
+Requirements:
+- Pointers
+- Recursion
+
+Goal:
+
+You will turn in a file named findpath.c containing a findpath() function prototyped like this:
+
+int	findpath(char** map, int x, int y);
+
+Arguments:
+-  map is a two dimensional array of characters representing tiles in the map, like so:
+
+####E###
+# #    #
+## ### #
+#      #
+########
+
+E: End tile
+#: Wall tile (you cannot walk there)
+(space): Blank tile (You can walk there)
+
+- (x, y) are your starting coordinates, counted from the top left, starting from 0.
+Note that the map accesses rows first, then columns, so the proper way to access your position is:
+map[y][x]
+
+You must find a path from your starting position to the End position. You may only move up, down, left and right, not diagonally.
+You will map your path by printing the position of each blocks you have to walk on separated by newlines, like so:
+(x,y)
+
+However you must first print the LAST node, then the one before that, then finish with your starting node. So if you started from the position (1,3) and went in a straight line to the position (1,5), you would print:
+(1,5)
+(1,4)
+(1,3)
+
+Forbidden keywords:
+- while
+- for
+- goto
+- malloc
+- asm
+
+Additional information:
+- You may make use of findpath's return value as you wish. It will be ignored in the correction
+- You don't have to worry about the map's size, it will always be surrounded by walls, so if you do things well you will never break anything
+- Pedro will never spawn on a wall
+- You may edit the contents of the map safely
+- Pedro wants to be fast, so he can never take steps back, i.e he cannot step twice on the same tile!

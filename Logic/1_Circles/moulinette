@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+if [ $# -ne 1 ]
+then
+    echo "USAGE : ./moulinette file.c" ; exit
+fi
+
+gcc correction/main.c correction/soluce.c $1 -lm
+
+./a.out
+
+var=$?
+
+if [ $var = 0 ]
+then
+    echo "Bravo!"
+else
+    echo "Dommage!"
+fi
+rm ./a.out

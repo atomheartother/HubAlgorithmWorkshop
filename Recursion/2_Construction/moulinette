@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+if [ $# -ne 1 ]
+then
+    echo "USAGE : ./test.sh file.c" ; exit
+fi
+
+grep -e "while" -e "for" -e "goto" -e "malloc" -e "asm" $1
+
+if [ $? -eq 0 ]; then
+    echo "You have a forbidden keyword!"
+    exit
+fi
+
+sed -i '1s/^/#include "data_structures.h"\n/' $1
+
+echo " --- Launching test battery --- "
+
+gcc -o solution main.c tester.c $1 -I./
+
+./solution > result
+
+echo " ---    End    test battery --- "
+
+echo " ---  Starting Algolinette  --- "
+
+gcc -o algolinette moulinette.c tester.c -I./
+
+./algolinette result
+
+echo " ---    End    Algolinette  --- "
+
+rm algolinette result solution
