@@ -28,6 +28,8 @@ E: End tile
 #: Wall tile (you cannot walk there)
 (space): Blank tile (You can walk there)
 
+Tiles are accessed like this: map[y][x]
+
 - (x, y) are your starting coordinates, counted from the top left, starting from 0.
 Note that the map accesses rows first, then columns, so the proper way to access your position is:
 map[y][x]
