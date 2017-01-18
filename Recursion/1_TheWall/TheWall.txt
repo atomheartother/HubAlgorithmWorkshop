@@ -28,9 +28,10 @@ E: End tile
 #: Wall tile (you cannot walk there)
 (space): Blank tile (You can walk there)
 
-- (x, y) are your starting coordinates, counted from the top left, starting from 0.
-Note that the map accesses rows first, then columns, so the proper way to access your position is:
+- (x, y) are your starting coordinates. Note that the map accesses rows first, then columns, so the proper way to access your position is:
 map[y][x]
+
+Coordinates are counted from the TOP LEFT, so in the example map, 'E' is (1, 0)
 
 You must find a path from your starting position to the End position. You may only move up, down, left and right, not diagonally.
 You will map your path by printing the position of each blocks you have to walk on separated by newlines, like so:
