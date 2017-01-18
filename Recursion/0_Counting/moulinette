@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+if [ $# -ne 1 ]
+then
+    echo "USAGE : ./moulinette file.c" ; exit
+fi
+
+grep -e "while" -e "for" -e "goto" -e "malloc" -e "asm" $1
+
+if [ $? -eq 0 ]; then
+    echo "You have a forbidden keyword!"
+    exit
+fi
+
+gcc correction/correct.c $1
+
+./a.out
+
+if [ $? = 0 ]
+then
+    echo "Bravo!"
+else
+    echo "Dommage!"
+fi
+rm ./a.out

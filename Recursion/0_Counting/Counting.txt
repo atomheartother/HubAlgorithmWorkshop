@@ -1,0 +1,41 @@
+===
+COUNTING
+===
+
+You are Pedro, an illegal immigrant who wants to buy passage to Americam even qfter Trump built his wall.
+You found someone who can get you near the wall but he keeps insisting you haven't paid him enough yet. Pedro has never been good at maths, but now he has to count to make sure he isn't being swindled!
+
+===
+REQUIREMENTS
+===
+
+- Recursion
+
+===
+EXERCISE
+===
+
+Make a counting() function prototyped like this:
+
+int     counting(int n);
+
+It should return the sum of every number from 1 to n. So for example, counting(3) returns 1 + 2 + 3 = 6.
+
+Forbidden keywords:
+- while
+- for
+- goto
+- malloc
+- asm
+
+===
+ADDITIONAL INFORMATION
+===
+
+This is a beginner exercise if you're not comfortable with recursion. Take your time and don't just look up the answer, that's lame.
+
+===
+BONUS
+===
+
+You are only allowed one ';' character in your whole file.
