@@ -1,17 +1,18 @@
 Write a function interection which tells the user if two circles intsercet. It has this prototype :
 
-bool intersection(int x1, int y1, int r1, int x2, int y2, int r2);
+int intersection(int x1, int y1, int r1, int x2, int y2, int r2);
 
-x1 && y1 are the center of the Circle1, and r1 is its radius.
+- x1 && y1 are the center of the Circle1, and r1 is its radius.
+- x2 && y2 are the center of the Circle2, and r2 is its radius.
 
-this function will return 0 if the two circles intersect, and 1 if not.
+This function will return 0 if the two circles intersect, and 1 if not.
 
 
          ****
    ***  *    *
   *   *       *
  *   * *       *
-*   *   *       *    ====> TRUE
+*   *   *       *    ====> 0
  *   * *       *
   *   *       *
    *** *     *
@@ -22,7 +23,7 @@ this function will return 0 if the two circles intersect, and 1 if not.
        *  **  *
       *  *  *  *
      *    **    *
-    *            *     ====> FALSE
+    *            *     ====> 1
     *            *
      *          *
       *        *
@@ -31,7 +32,7 @@ this function will return 0 if the two circles intersect, and 1 if not.
 
 
     **     **
-   *  *   *  *        =====> FALSE
+   *  *   *  *        =====> 1
     **     **
 						          __________________________
 Just a friendly reminder : distance between two points = \/ (x2 - x1)² + (y2 - y1)²
