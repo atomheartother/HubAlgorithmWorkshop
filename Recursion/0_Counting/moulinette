@@ -23,9 +23,8 @@ then
     then
 	echo "And you did the bonus! Awesome!"
     fi
-fi
-
 else
     echo "Dommage!"
 fi
+
 rm ./a.out
