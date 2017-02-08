@@ -15,6 +15,7 @@ SRC_WALL=	$(SRCDIR)main.c	\
 
 SRC_CORR=	$(SRCDIR)main_correct.c	\
 		$(SRCDIR)funcs.c	\
+		$(SRCDIR)get_next_line.c \
 		$(SRCDIR)correct_map.c
 
 OBJ_WALL= $(patsubst $(SRCDIR)%.c,$(OBJDIR)%.o,$(SRC_WALL))

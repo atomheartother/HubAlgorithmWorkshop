@@ -5,6 +5,11 @@ THE SPEECH
 Pedro is now running for president in the United States. He managed to get a fake birth certificate, and despite not speaking a word of English, he is now in the Presidential race!
 But today he has to give a big speech in a swing state. This speech could make or break his whole campaign - and Pedro doesn't speak a word of english! He will have to be as brief as possible, but very effective!
 
+Prerequisites:
+
+- Recursion
+- Bitwise operators
+
 ===
 EXERCISE
 ===

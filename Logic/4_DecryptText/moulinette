@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if [ $# -ne 1 ]
+then
+    echo "USAGE : ./test.sh file.c" ; exit
+fi
+
+echo " --- Compile your file --- "
+gcc -o solution algolinette/moulinette.c $1
+echo " ---  End Compilation  --- "
+
+echo " ---  Starting Algolinette  ---"
+echo ""
+./solution
+echo " ---    End    Algolinette  --- "
+
+rm solution

@@ -19,6 +19,12 @@ gcc correction/correct.c $1
 if [ $? = 0 ]
 then
     echo "Bravo!"
+    if [ $(fgrep -o ';' $1 | wc -l) -eq '1' ]
+    then
+	echo "And you did the bonus! Awesome!"
+    fi
+fi
+
 else
     echo "Dommage!"
 fi

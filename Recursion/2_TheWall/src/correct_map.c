@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 #include "funcs.h"
+#include "get_next_line.h"
 
 #define KO "KO"
 #define BAD_COORD "Could not read all coordinates, they ended too early or were formatted wrong."
@@ -11,9 +13,8 @@
 
 int	get_next_coords(int *x, int *y)
 {
-  char	*line = NULL;
-  size_t	len = 0;
-  if (getline(&line, &len, stdin) == -1)
+  char	*line = get_next_line(STDIN_FILENO);
+  if (!line)
     {
       printf("Input ended unexpectedly\n");
       return 2;

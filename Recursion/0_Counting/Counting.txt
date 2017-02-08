@@ -19,7 +19,7 @@ Make a counting() function prototyped like this:
 
 int     counting(int n);
 
-It should return the sum of every number from 1 to n. So for example, counting(3) returns 1 + 2 + 3 = 6.
+It should return the sum of every number from 0 to n. So for example, counting(3) returns 1 + 2 + 3 = 6.
 
 Forbidden keywords:
 - while

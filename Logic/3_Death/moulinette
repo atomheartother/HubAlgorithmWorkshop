@@ -5,7 +5,7 @@ then
     echo "USAGE : ./moulinette file.c" ; exit
 fi
 
-gcc correction/correct.c $1 -O3
+gcc ./correction/correct.c $1 -O3
 
 timeout 1 ./a.out map.txt
 

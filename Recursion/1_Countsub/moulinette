@@ -7,15 +7,8 @@ fi
 
 grep -e "while" -e "for" -e "goto" -e "malloc" -e "asm" $1
 
-if [ $? -eq 0 ]
-then
+if [ $? -eq 0 ]; then
     echo "You have a forbidden keyword!"
-    exit
-fi
-
-if [ $(fgrep -o ';' $1 | wc -l) -ne '1' ]
-then
-    echo "You have too many operations"
     exit
 fi
 
@@ -26,6 +19,10 @@ gcc correction/correct.c $1
 if [ $? = 0 ]
 then
     echo "Bravo!"
+    if [ $(fgrep -o ';' $1 | wc -l) -eq '2' ]
+    then
+	echo "And you did the bonus! Awesome!"
+    fi
 else
     echo "Dommage!"
 fi

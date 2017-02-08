@@ -1,0 +1,37 @@
+===
+DecryptText
+===
+
+==
+STORY:
+==
+
+he American government thinks that the famous Hydra organisation is preparing something big.
+Of course Hydra is hiding very important French documents behind a secret code...
+The CIA has decided to contact you, and all your fabulous skills, to decrypt all the messages !
+
+==
+SUBJECT
+==
+
+Code a function 'CIAdecoder' prototyped like this:
+
+void	CIAdecoder(char *text);
+
+You must modify 'text' and decode it.
+
+The experts found some information about the encryption scheme:
+- [A-Z] and [a-z] characters are encoded, all the others aren't.
+- The characters have been switched randomly.
+- One character matches to only one other character.
+
+Some experts are working on a dictionary method. For exemple, a two letter word can probably be French "le", "la", "il", "et", etc.. Some words are used more often than others. Some letters are used more often than others...
+
+ADDITIONAL INFORMATION:
+
+- May the force be with you.
+
+
+This exercise is difficult, and will need lot of patience et reflexion. Of course brute-forcing isn't the solution and will not work.
+We are expecting here more than 80% of recognition.
+Use our moulinette to test your solution gradually.

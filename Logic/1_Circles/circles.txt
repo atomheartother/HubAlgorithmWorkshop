@@ -1,10 +1,10 @@
-Write a function intersection() which tells the user if two circles intersect. It has this prototype :
+Write a function interection which tells the user if two circles intsercet. It has this prototype :
 
-int     intersection(int x1, int y1, int r1, int x2, int y2, int r2);
+bool intersection(int x1, int y1, int r1, int x2, int y2, int r2);
 
 x1 && y1 are the center of the Circle1, and r1 is its radius.
 
-This function will return 0 if the two circles intersect, and 1 if not.
+this function will return 0 if the two circles intersect, and 1 if not.
 
 
          ****

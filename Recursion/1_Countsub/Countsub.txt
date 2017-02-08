@@ -1,0 +1,48 @@
+===
+COUNTING
+===
+
+Pedro has found a way to get to the wall, onto a truck that's loaded with other mexicans.
+The truck driver, however, only speaks English, and Pedro soon has to ask him if he can go pee. Pedro is going to have to piece together an english sentence from words he hears around him, quick!
+
+===
+REQUIREMENTS
+===
+
+- Recursion
+- C strings
+
+===
+EXERCISE
+===
+
+Make a countsub function prototyped like this:
+
+int	countsub(char *string, char *sub);
+
+It should return the sum of occurences of "sub" in "str". For example:
+
+countsub("titi", "ti") -> 2
+countsub("hehehohohaha", "hoha") -> 1
+countsub("abcdef", "zob") -> 0
+countsub("acacabacaba", "acaba") -> 2
+
+Forbidden keywords:
+- while
+- for
+- goto
+- malloc
+- asm
+
+===
+ADDITIONAL INFORMATION
+===
+
+- Look at that last example carefully, this exercise is a bit harder than you think!
+- You are allowed more than one function, remember that!
+
+===
+BONUS
+===
+
+Do it in only two instructions (only 2 ';' characters authorized)
