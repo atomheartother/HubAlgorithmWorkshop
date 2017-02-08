@@ -6,7 +6,7 @@ DecryptText
 STORY:
 ==
 
-he American government thinks that the famous Hydra organisation is preparing something big.
+The American government thinks that the famous Hydra organisation is preparing something big.
 Of course Hydra is hiding very important French documents behind a secret code...
 The CIA has decided to contact you, and all your fabulous skills, to decrypt all the messages !
 
