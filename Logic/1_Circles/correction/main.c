@@ -34,7 +34,6 @@ int main(int ac, char **av)
 	}
       else
 	printf("OK\n");
-      i++;
     }
   if (f == 0)
     return (0);
