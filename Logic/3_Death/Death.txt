@@ -38,6 +38,6 @@ ADDITIONAL INFORMATION:
 - You cannot go diagonally
 - You cannot cross walls
 - The order in which you cross the posts does NOT matter as long as you cross them all
-- Your program should be properly optimized. Anything under one second is unacceptable,
+- Your program should be properly optimized. Anything over one second is unacceptable,
 
 This exercise might take a lot of code, I strongly advise you to use our correction main and test gradually. 
